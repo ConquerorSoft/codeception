@@ -26,4 +26,18 @@ class FirstCest
         $I->click("Encode");
         $I->see("'$plainString' plain string is encoded as '$encodedString'");
     }
+    
+    public function decodingFormWorks(AcceptanceTester $I)
+    {
+        $plainString = "password";
+        $encodedString = "πåßßÏø®ı";
+        $I->amOnPage('/');
+        $I->amGoingTo("Test decoding");
+        $I->seeElement("#decode_form");
+        $I->seeElement("#encoded_string_input");
+        $I->seeElement("#decode_button");
+        $I->fillField("#encoded_string_input", $encodedString);
+        $I->click("Decode");
+        $I->see("'$encodedString' encoded string is decoded as '$plainString'");
+    }
 }
