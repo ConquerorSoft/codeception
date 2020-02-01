@@ -1,6 +1,6 @@
 <?php
 
-namespace conquerorsoft\coception;
+namespace conquerorsoft\codeception;
 
 class StringTransformation
 {

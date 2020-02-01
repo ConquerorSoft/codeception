@@ -1,6 +1,6 @@
 <?php 
-include './src/StringTransformation.php';
-$stringTransformation = new conquerorsoft\coception\StringTransformation();
+include './vendor/autoload.php';
+$stringTransformation = new conquerorsoft\codeception\StringTransformation();
 
 ?>
 <h1>String transformation</h1>
